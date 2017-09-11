@@ -1,0 +1,76 @@
+boot.o: boot.S multiboot.h x86_desc.h types.h
+syshandler.o: syshandler.S syshandler.h x86_desc.h types.h
+x86_desc.o: x86_desc.S x86_desc.h types.h
+filesystem.o: filesystem.c filesystem.h types.h lib.h drivers/terminal.h \
+  drivers/../types.h drivers/../x86_desc.h drivers/../types.h \
+  drivers/../lib.h drivers/../i8259.h drivers/../idt.h \
+  drivers/../x86_desc.h drivers/../lib.h drivers/../i8259.h \
+  drivers/../drivers/terminal.h drivers/../drivers/rtc.h \
+  drivers/../drivers/../types.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../idt.h drivers/../syshandler.h \
+  drivers/../syscalls.h drivers/../filesystem.h drivers/../paging.h \
+  drivers/../syscalls.h drivers/rtc.h
+i8259.o: i8259.c i8259.h types.h lib.h drivers/terminal.h \
+  drivers/../types.h drivers/../x86_desc.h drivers/../types.h \
+  drivers/../lib.h drivers/../i8259.h drivers/../idt.h \
+  drivers/../x86_desc.h drivers/../lib.h drivers/../i8259.h \
+  drivers/../drivers/terminal.h drivers/../drivers/rtc.h \
+  drivers/../drivers/../types.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../idt.h drivers/../syshandler.h \
+  drivers/../syscalls.h drivers/../filesystem.h drivers/../paging.h \
+  drivers/../syscalls.h drivers/rtc.h
+idt.o: idt.c idt.h types.h x86_desc.h lib.h drivers/terminal.h \
+  drivers/../types.h drivers/../x86_desc.h drivers/../lib.h \
+  drivers/../i8259.h drivers/../types.h drivers/../idt.h \
+  drivers/../syscalls.h drivers/../x86_desc.h drivers/../filesystem.h \
+  drivers/../lib.h drivers/../drivers/terminal.h drivers/../paging.h \
+  drivers/../drivers/rtc.h drivers/../drivers/../types.h \
+  drivers/../drivers/../lib.h drivers/../drivers/../idt.h drivers/rtc.h \
+  i8259.h drivers/rtc.h syshandler.h syscalls.h
+kernel.o: kernel.c multiboot.h types.h x86_desc.h lib.h \
+  drivers/terminal.h drivers/../types.h drivers/../x86_desc.h \
+  drivers/../lib.h drivers/../i8259.h drivers/../types.h drivers/../idt.h \
+  drivers/../x86_desc.h drivers/../lib.h drivers/../i8259.h \
+  drivers/../drivers/terminal.h drivers/../drivers/rtc.h \
+  drivers/../drivers/../types.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../idt.h drivers/../syshandler.h \
+  drivers/../syscalls.h drivers/../filesystem.h drivers/../paging.h \
+  drivers/../syscalls.h drivers/rtc.h i8259.h debug.h idt.h paging.h \
+  filesystem.h syscalls.h
+lib.o: lib.c lib.h types.h drivers/terminal.h drivers/../types.h \
+  drivers/../x86_desc.h drivers/../types.h drivers/../lib.h \
+  drivers/../i8259.h drivers/../idt.h drivers/../x86_desc.h \
+  drivers/../lib.h drivers/../i8259.h drivers/../drivers/terminal.h \
+  drivers/../drivers/rtc.h drivers/../drivers/../types.h \
+  drivers/../drivers/../lib.h drivers/../drivers/../idt.h \
+  drivers/../syshandler.h drivers/../syscalls.h drivers/../filesystem.h \
+  drivers/../paging.h drivers/../syscalls.h drivers/rtc.h
+paging.o: paging.c paging.h types.h
+syscalls.o: syscalls.c syscalls.h x86_desc.h types.h filesystem.h lib.h \
+  drivers/terminal.h drivers/../types.h drivers/../x86_desc.h \
+  drivers/../lib.h drivers/../i8259.h drivers/../types.h drivers/../idt.h \
+  drivers/../x86_desc.h drivers/../lib.h drivers/../i8259.h \
+  drivers/../drivers/terminal.h drivers/../drivers/rtc.h \
+  drivers/../drivers/../types.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../idt.h drivers/../syshandler.h \
+  drivers/../syscalls.h drivers/../syscalls.h drivers/rtc.h paging.h \
+  drivers/rtc.h
+rtc.o: drivers/rtc.c drivers/rtc.h drivers/../types.h drivers/../lib.h \
+  drivers/../types.h drivers/../drivers/terminal.h \
+  drivers/../drivers/../types.h drivers/../drivers/../x86_desc.h \
+  drivers/../drivers/../types.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../i8259.h drivers/../drivers/../idt.h \
+  drivers/../drivers/../x86_desc.h drivers/../drivers/../lib.h \
+  drivers/../drivers/../i8259.h drivers/../drivers/../drivers/terminal.h \
+  drivers/../drivers/../drivers/rtc.h drivers/../drivers/../syshandler.h \
+  drivers/../drivers/../syscalls.h drivers/../drivers/../filesystem.h \
+  drivers/../drivers/../paging.h drivers/../drivers/../syscalls.h \
+  drivers/../drivers/rtc.h drivers/../idt.h
+terminal.o: drivers/terminal.c drivers/terminal.h drivers/../types.h \
+  drivers/../x86_desc.h drivers/../types.h drivers/../lib.h \
+  drivers/../drivers/terminal.h drivers/../i8259.h drivers/../idt.h \
+  drivers/../x86_desc.h drivers/../lib.h drivers/../i8259.h \
+  drivers/../drivers/rtc.h drivers/../drivers/../types.h \
+  drivers/../drivers/../lib.h drivers/../drivers/../idt.h \
+  drivers/../syshandler.h drivers/../syscalls.h drivers/../filesystem.h \
+  drivers/../paging.h drivers/../syscalls.h drivers/rtc.h
